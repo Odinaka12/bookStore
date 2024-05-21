@@ -1,0 +1,312 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+body{
+  background-color: whitesmoke;
+}
+header{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../src/assets/Bg-img.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: whitesmoke;
+  box-shadow:  rgba(0, 0, 0, 0.192) 0 15px 10px -15px;
+}
+.bgHolder{
+  /* clip-path: circle(100% at left 200px); */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bgg{
+  width: 50%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+}
+.bgg p{
+  color: white;
+  font-size: 25px;
+  max-width: 400px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
+  word-spacing: 10px;
+}
+.findBook{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+  height: 100%;
+  padding: 0 15px;
+}
+.findBook h1{
+  font-size: 50px;
+  padding-bottom: 10px;
+  color: black;
+}
+.findBook a{
+  width: 500px;
+  background-color: inherit;
+  border: 1px solid silver;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.findBook a input{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px 0;
+  font-size: 18px;
+}
+.findBook a input::placeholder{
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+section{
+  width: 100%;
+  padding: 50px 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+}
+.card{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.192) 0 3px 8px;
+  transition: all ease-in-out .5s;
+  cursor: pointer;
+}
+.card:hover{
+  transform: scale(0.9);
+}
+.imgContainer img{
+width: 160px;
+height: 100%;
+border-radius: 5px;
+}
+.card .shortDis{
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+}
+.textArea{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px ;
+}
+.textArea .title{
+  font-size: 23px;
+  text-align: start;
+}
+.card button{
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  background-color: #FFCE1A;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.imgContainer{
+  height: 100%;
+  border-radius: 5px;
+}
+.overlay{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 0.048));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.overlay-inner{
+  background: white;
+  width: 700px;
+  height: 450px;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  scrollbar-color: whitesmoke;
+  scroll-behavior: smooth;
+  border-radius: 5px;
+  padding: 10px;
+}
+.inner-box{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25px;
+  gap: 20px;
+}
+.info .cancle{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  cursor: pointer;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+
+}
+.info h1,.info h4,.info h5{
+  margin-bottom: 15px;
+}
+.info a{
+  background-color: #FFCE1A;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;margin-top: 20px;
+  cursor: pointer;
+}
+.description{
+  margin-top: 30px;
+  width: 100%;
+}
+.description p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-wrap: wrap;
+}
+@media(max-width: 1200px){
+  section{
+    padding: 50px 20px ;
+   }
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ @media(max-width: 1100px){
+  .bgHolder{
+    display: flex;
+    flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  }
+  .findBook{
+    background: none;
+    width: 0;
+    height: 0;
+    width: 100%;
+  }
+  .findBook h1{
+    color: white;
+    font-size: 30px;
+  }
+  .bgg{
+    width: 100%;
+  }
+  .bgg p{
+    max-width: 500px;
+  }
+  .findBook a input{
+    padding: 0 18px;
+    color: white;
+  }
+  .findBook a img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(208deg) brightness(111%) contrast(101%);
+  }
+  .findBook a input::placeholder{
+    color: white;
+  }
+}
+  @media(max-width: 600px){
+    .findBook a{
+      width: 300px;
+    }
+    .findBook a input::placeholder, .findBook a input{
+      font-size: 15px;
+    }
+  }
+  @media(max-width: 350px){
+    .bgg p{
+      font-size: 20px;
+      text-wrap: wrap;
+    }
+    .findBook a{
+      width: 250px;
+    }
+    .findBook a input::placeholder, .findBook a input{
+      font-size: 12px;
+    }
+    .findBook h1{
+      font-size: 25px;
+    }
+    .inner-box{
+      gap: 10px;
+    }
+    .card{
+      flex-direction: column;
+    }
+    .card .shortDis{
+      text-align: center;
+    }
+    .imgContainer{
+      margin-top: 10px;
+    }
+  }
+  @media(max-width: 500px){
+    .container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .textArea .title{
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .card .shortDis{
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
