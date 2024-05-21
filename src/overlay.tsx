@@ -1,4 +1,4 @@
-import React from "react";
+
 import cancleImg from "./assets/Vector.png";
 
 const Modal = ({show, item, onClose}) =>{
